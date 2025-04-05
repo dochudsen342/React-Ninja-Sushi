@@ -1,0 +1,15 @@
+.total__item__cart{
+    position: absolute;
+    top: -20%;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    background-color: #FF6633;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

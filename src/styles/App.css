@@ -1,0 +1,33 @@
+body{
+  background-color: #F5F5F7;
+  font-family: 'inter';
+}
+
+.main__container{
+  max-width: 1580px;
+  width: 1580px;
+  margin-inline: auto;
+}
+
+.footer__pre_title{
+  position: relative;
+  color: #9E9E9E;
+  font-size: 16px;
+  font-weight: 400;
+  width: 778px;
+  text-align: center;
+  margin-inline: auto;
+  margin-bottom: 66px;
+}
+
+.reed__more{
+  color: #00CC2D;
+  font-size: 16px;
+  font-weight: 500;
+  position: absolute;
+  right: 8%;
+  bottom: -60%;
+  cursor: pointer;
+}
+
+

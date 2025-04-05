@@ -1,0 +1,139 @@
+
+.basket__footer{
+    width: 530px;
+    height: 64px;
+    padding: 24px 30px;
+    border-radius: 0 0 12px 12px;
+    background-color: #F5F5F7;   
+    position: absolute;
+    bottom: -30%;
+    left: -29px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal__content_title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.title{
+    color: #1D1D1F;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.close__btn{
+    background-image: url(../../../images/HeaderActionIcons/cross.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+.total__price > span{
+    color: #9E9E9E;
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    margin-top: 20px;
+}
+
+.total__price > p {
+    margin-top: 4px;
+    color: #1D1D1F;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.footer__btn{
+    width: 180px;
+    height: 56px;
+    background-color: #00CC2D;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    transition: 0.3s;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+
+.basket__product_content{
+    height: 486px;
+    overflow-y: scroll;
+    padding-left: 12px;
+    
+}
+
+.basket__product_content::-webkit-scrollbar{
+    width: 0;
+}
+
+
+.empty__modal__content{
+    margin-top: 105px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 32px;
+}
+
+.empty__modal_description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.empty__modal_title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 6px;
+}
+
+.empty__modal_title > span:first-child{
+    color: #1D1D1F;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.empty__modal_title > span:last-child{
+    color: #686870;
+    text-align: center;
+}
+
+.empty__modal_options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 12px;
+}
+
+.empty__modal_options button{
+    width: 280px;
+    height: 56px;
+    color: #00CC2D;
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.empty__modal_options button:hover{
+    background-color: #00CC2D;
+    color: white;
+}

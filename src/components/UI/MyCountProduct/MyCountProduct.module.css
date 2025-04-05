@@ -1,0 +1,46 @@
+
+.counter{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.increment{
+    background-color: #CCF5D5;
+    background-image: url(../../../images/HeaderActionIcons/addCross.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.increment:hover{
+    background-color: #00CC2D;
+    background-image: url(../../../images/HeaderActionIcons/addCross-hover.svg);
+}
+
+.decrement{
+    background-color: #CCF5D5;
+    background-image: url(../../../images/HeaderActionIcons/minus.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.decrement:hover{
+    background-color: #00CC2D;
+    background-image: url(../../../images/HeaderActionIcons/minus-hover.svg);
+}
+
+.value{
+    font-size: 20px;
+    font-weight: 500;
+}

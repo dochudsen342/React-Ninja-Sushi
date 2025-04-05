@@ -1,0 +1,72 @@
+.app__link{
+    display: flex;
+    column-gap: 12px;
+}
+
+.app__appStore{
+    position: relative;
+    background-color: #1D1D1F;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    width: 108px;
+    height: 35px;  
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.app__appStore > span {
+    position: absolute;
+    top: 50%;
+    left: 58%;
+    transform: translate(-50%,-50%);
+    text-wrap: nowrap;
+}
+
+.app__appStore::after{
+    content: '';
+    position: absolute;
+    background-image: url(../../../images/appStoreIcons/appStore.svg);
+    width: 15px;
+    height: 20px;
+    left: 9%;
+    top: 20%;
+}
+
+.app__googlePlay{
+    position: relative;
+    background-color: #1D1D1F;
+    background-repeat: no-repeat;
+    background-position: left;
+    color: white;
+    font-weight: 600;
+    border-radius: 12px;
+    border: none;
+    width: 123px;
+    height: 37px;  
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.app__googlePlay::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 23px;
+    background-image: url(../../../images/appStoreIcons/googlePlay.svg);
+    left: 8%;
+    top: 21%;
+}
+
+.app__googlePlay > span{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%,-50%);
+    text-wrap: nowrap;
+}
+
+
+
+

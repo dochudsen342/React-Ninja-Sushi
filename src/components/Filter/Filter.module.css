@@ -1,0 +1,24 @@
+.filter__container{
+    width: 784px;
+    height: 83px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    margin-top: 16px;
+    margin-inline: auto;
+    padding-inline: 16px;
+    padding-block: 6px;
+}
+
+.filter__content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.category__name{
+    color: #1D1D1F;
+    font-size: 18px;
+    font-weight: 500;
+}

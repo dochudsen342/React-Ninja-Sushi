@@ -1,0 +1,20 @@
+.header__action_btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    border: 1px solid #D2D2D7;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.header__action_btn:hover{
+    border: 1px solid #FF6633;
+}
+
+.active__action_btn{
+    background-color: #FF6633;
+}

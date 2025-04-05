@@ -1,0 +1,13 @@
+.mySwiperPagination{
+    background-color: red;
+    display: flex;
+    column-gap: 3px;
+}
+
+.myBulletElement {
+    background-color: black;
+    display: block;
+    border-radius: 12px;
+    width: 11px;
+    height: 11px;
+}

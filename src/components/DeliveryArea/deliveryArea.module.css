@@ -1,0 +1,21 @@
+.deleveryArea__container{
+    margin-top: 124px;
+    margin-bottom: 226px;
+    background-color: white;
+    padding-top: 88px;
+    margin-inline: auto;
+}
+
+.deleveryArea__title{
+    color: #1D1D1F;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.google__map{
+    border: none;
+    width: 100%;
+    height: 671px;
+}
+

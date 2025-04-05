@@ -1,0 +1,111 @@
+.basket__card__container{
+    margin-bottom: 12px;
+    overflow-x: visible;
+}
+
+.product__basket_card{
+    position: relative;
+    width: 512px;
+    height: 47px;
+    background-color: #F5F5F7;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:12px 18px 12px 0;
+    margin-bottom: 12px; 
+}
+
+.product__info{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding-left: 18px;
+}
+
+.name, .weight{
+    margin: 0;
+}
+
+.name{
+    margin-bottom:3px;
+    color: #1D1D1F;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.weight{
+    color: #FF6633;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.product__count{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.product__value{
+    display: flex;
+    align-items: center;
+    column-gap:16px;
+}
+
+.product__price{
+    color: #1D1D1F;
+    font-size: 17px;
+    font-weight: 6  00;
+}
+
+.qantity{
+    color: #1D1D1F;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.decrement{
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    background-image: url(../../images/HeaderActionIcons/minusBasket.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.increment{
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    background-image: url(../../images/HeaderActionIcons/addCrossBasket.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.remove__product{
+    position: absolute;
+    z-index: 100;
+    left: -2%;
+    top:30%;
+    width: 25px;
+    height: 25px;
+    border-radius: 8px;
+    border: none;
+    background-color: white;
+    background-image: url(../../images/HeaderActionIcons/rotateCross.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.remove__product:hover{
+    background-color: #F44837;
+    background-image:url(../../images/HeaderActionIcons/rotateCross-hover.svg) ;
+}

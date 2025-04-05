@@ -1,0 +1,33 @@
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 32px;
+}
+
+.title span{
+    color: #1D1D1F;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.product__category__section{
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    justify-items: center;
+    row-gap: 40px;
+}
+
+.empty__content{
+    display: block;
+    width: 100%;
+    font-size: 35px;
+    color: black;
+    font-weight: 600;
+}

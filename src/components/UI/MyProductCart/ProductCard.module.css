@@ -1,0 +1,108 @@
+.card{
+    background-color: white;
+    border-radius: 12px;
+    width: 331px;
+    height: fit-content;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.card__content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.card__name{
+    font-size: 27px;
+    font-weight: 700;
+    color: #1D1D1F;
+}
+
+.card__weight{
+    color: #FF6633;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.card__subtitle{
+    color: #686870;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.card__bottom_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card__price{
+    display: flex;
+    align-items: center;
+    column-gap: 7px;
+}
+
+.card__value{
+    color: #1D1D1F;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.card__currency{
+    color: #686870;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.card__options{
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+.card__btn_favorite{
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background-image: url('../../../images/HeaderActionIcons/heartOrange.svg');/*svgComonents*/
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card__btn_favorite:hover{
+    background-image: url('../../../images/HeaderActionIcons/heartOrange-hover.svg');
+    background-color: #FF6633;
+}
+
+.card__btn_favorite_active{
+
+}
+
+.card__btn_add_basket{
+    width: 76px;
+    height: 48px;
+    background-color: #CCF5D5;
+    border-radius: 12px;
+    background-image: url('../../../images/HeaderActionIcons/addCross.svg');/*svgComonents*/
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card__btn_add_basket:hover{
+    background-color: #00CC2D;
+    background-image: url('../../../images/HeaderActionIcons/addCross-hover.svg');
+}
+
+

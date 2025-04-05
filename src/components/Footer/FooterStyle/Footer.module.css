@@ -1,0 +1,112 @@
+.footer__container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 34px;
+    height: 248px;
+    background-color: white;
+    padding-inline: 172px;
+    padding-block: 64px;
+}
+
+.footer__top__content{
+    display: flex;
+    align-items: center;
+  
+    column-gap: 120px;
+}
+
+.footer__logo{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.footer__logo__subtitle{
+    color: #9E9E9E;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer__nav{
+    display: flex;
+    align-items: flex-start;
+    column-gap: 48px;
+
+}
+
+.footer__nav__title{
+    color: #686870;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.cl.footer__nav__subtitle{
+    color: #686870;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav__list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 8px;
+    list-style: none;
+    width: 101px;
+}
+
+.nav__list__social{
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    list-style: none;
+}
+
+.nav__number{
+    width: 168px;
+}
+
+.nav__time{
+    width: 137px;
+}
+
+.nav__item{
+    color: #1D1D1F;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav__item_social{
+    display: flex;
+    column-gap: 12px;
+}
+
+.footer__social__title{
+    color: #1D1D1F;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.footer__social__subtitle{
+    color: #9E9E9E;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.footer__bottom__content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__bottom_title{
+    color: #1D1D1F;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.footer__bank__card{
+    display: flex;
+    column-gap: 24px;
+}

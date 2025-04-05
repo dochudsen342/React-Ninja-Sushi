@@ -1,0 +1,26 @@
+.basket__btn{
+    width: 147px;
+    height: 50px;
+    border: 1px solid #D2D2D7;
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+    color: #686870;
+    font-size:18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.basket__btn:hover{
+    border: 1px solid #FF6633;
+}
+
+.active__basket{
+    fill: white;
+    color: white;
+    background-color:#FF6633 ;
+}

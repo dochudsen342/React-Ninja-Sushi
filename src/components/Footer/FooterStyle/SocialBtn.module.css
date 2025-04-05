@@ -1,0 +1,82 @@
+.button__social{
+    width: 26px;
+    height:26px;
+    background-color: #9E9E9E;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.facebook{
+    background-image: url(../../../images/socialMediaIcons/facebook.svg);
+    background-position:bottom center;
+    background-repeat: no-repeat;
+}
+
+.inst{
+    background-image: url(../../../images/socialMediaIcons/inst.svg);
+    background-position:center;
+    background-repeat: no-repeat;
+}
+
+.footer__button__inst{
+    width: 246px;
+    height: 56px;
+    background-color: #F5F5F7;
+    border-radius: 12px;
+    border: none;
+    color: #00CC2D;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.footer__button__inst:hover{
+    color: white;
+    background-color: #00CC2D;
+}
+
+.social__telegram{
+    width: 174px;
+    height: 44px;
+    background-color: #F5F5F7;
+    border: none;
+    border-radius: 12px;
+    color: #039BE5;
+    font-size: 16px;
+    font-weight:600;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+
+.social__telegram:hover{
+    background-color: black;
+}
+
+.social__telegram:hover > span{
+    color: white;
+}
+
+.social__telegram > span {
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    transition: 0.3s;
+}
+
+.social__telegram:hover::after{
+    background-image: url(../../../images/socialMediaIcons/telegram-hover.svg);
+}
+
+.social__telegram::after{
+    content: '';
+    position: absolute;
+    width:20px;
+    height: 16px;
+    background-image: url(../../../images/socialMediaIcons/telegram.svg);
+    top: 35%;
+    left: 8%;
+    transition: 0.3s;
+}
