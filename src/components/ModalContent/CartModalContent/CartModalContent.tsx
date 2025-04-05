@@ -1,7 +1,7 @@
 import React, { FC, useContext } from 'react'
 import EmptyCart from './EmptyCart.jsx'
 import cl from './Cart.module.css'
-import CartNotEmpty from './CartNotEmpty.jsx'
+import CartNotEmpty from './CartNotEmpty'
 import { CartContext } from '../../../context/index.js'
 import { IsModalState } from '../../../hooks/UseIsModal.js'
 

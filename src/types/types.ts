@@ -6,7 +6,7 @@ export interface ProductCardItem {
     price:number,
     icon:string,
     weight:number,
-    detail?:string
+    detail?:string,
 }
 
 
@@ -15,7 +15,7 @@ export interface CartProductItem{
     title?:string,
     name:string,
     price:number,
-    icon:File,
+    icon:string,
     weight:number,
     detail?:string,
     qantity:number

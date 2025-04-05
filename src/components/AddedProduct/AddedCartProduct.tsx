@@ -1,11 +1,14 @@
-import React from 'react'
+import  { FC } from 'react'
 import cl from './AddedProduct.module.css'
 import { useUpdateCart } from '../../hooks/UseUpdateProduct.js'
+import { CartProductItem} from '../../types/types'
 
-
-const AddedBasketProduct = ({cardItem}) => {
-   const {updateCartItem} = useUpdateCart(cardItem)
-   const {icon,name,weight,price,qantity} = cardItem
+interface AddedCartProductProps{
+  cartItem:CartProductItem
+}
+const AddedCartProduct:FC<AddedCartProductProps> = ({cartItem}) => {
+   const {updateCartItem} = useUpdateCart(cartItem)
+   const {icon,name,weight,price,qantity} = cartItem
   return (
       <div className={cl.product__basket_card}>
         <div className={cl.product__info}>
@@ -28,4 +31,4 @@ const AddedBasketProduct = ({cardItem}) => {
   )
 }
 
-export default AddedBasketProduct
+export default AddedCartProduct

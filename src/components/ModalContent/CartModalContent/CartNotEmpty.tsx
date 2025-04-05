@@ -1,13 +1,14 @@
 import React,{useCallback, useContext, useId} from 'react'
-import AddedBasketProduct from '../../AddedProduct/AddedBasketProduct.jsx'
+import AddedCartProduct from '../../AddedProduct/AddedCartProduct'
 import cl from './Cart.module.css'
 import { CartContext } from '../../../context/index.js'
+import { CartProductItem } from '../../../types/types.js'
 
 
 const CartNotEmpty = () => {
     const {cart} = useContext(CartContext)
      const countTotalPrice = useCallback( () =>{
-          const totalPrice = cart.reduce((acc,product) => {
+          const totalPrice = cart.reduce((acc:number,product:CartProductItem) => {
             return acc + product.qantity * product.price 
           },0)     
           return totalPrice
@@ -17,7 +18,7 @@ const CartNotEmpty = () => {
   return (
     <>
     <div className={cl.basket__product_content}>  
-        {cart.map(product => <AddedBasketProduct key={product.name} cardItem={product}/>)}
+        {cart.map((product:CartProductItem) => <AddedCartProduct key={product.name} cartItem={product}/>)}
     </div>
     <div className={cl.basket__footer}>
         <div className={cl.total__price}>
