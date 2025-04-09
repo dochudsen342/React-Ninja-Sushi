@@ -1,6 +1,9 @@
-import {useCallback, useEffect} from "react"
+import {Dispatch, ReactElement, SetStateAction, useCallback, useEffect} from "react"
+import { ProductCardItem } from "../types/types"
 
-export const useSortPrice = (sortName,fillterCardList,setFilterCardList) =>{
+type SetFunc =(productCard:ProductCardItem[]) => void
+
+export const useSortPrice = (sortName:string,fillterCardList:ProductCardItem[],setFilterCardList:SetFunc) =>{
   
       const sortingPriceCardList = useCallback(() =>{
             if(sortName === 'lowToHight'){

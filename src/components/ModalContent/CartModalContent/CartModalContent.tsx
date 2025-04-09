@@ -8,8 +8,8 @@ import { IsModalState } from '../../../hooks/UseIsModal.js'
 interface CartModalContent{
   title?:string,
   setIsModal:(modalState:IsModalState) => void
-
 }
+
 const CartModalContent:FC<CartModalContent> = ({title = 'Ваш заказ',setIsModal}) => {
   const {cart} = useContext(CartContext)
   const isEmpty = !cart || cart.length === 0;

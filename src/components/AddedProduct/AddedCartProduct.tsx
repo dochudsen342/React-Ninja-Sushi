@@ -1,6 +1,6 @@
 import  { FC } from 'react'
 import cl from './AddedProduct.module.css'
-import { useUpdateCart } from '../../hooks/UseUpdateProduct.js'
+import { useUpdateCart } from '../../hooks/UseUpdateProduct'
 import { CartProductItem} from '../../types/types'
 
 interface AddedCartProductProps{
@@ -26,7 +26,7 @@ const AddedCartProduct:FC<AddedCartProductProps> = ({cartItem}) => {
             <button onClick={() =>{updateCartItem(1)}} className={cl.increment}></button>
           </div>
         </div>
-        <button onClick={() =>{updateCartItem('remove')}} className={cl.remove__product}></button>
+        <button onClick={() =>{updateCartItem(0)}} className={cl.remove__product}></button>
       </div>
   )
 }

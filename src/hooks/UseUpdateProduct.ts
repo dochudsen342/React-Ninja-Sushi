@@ -1,22 +1,26 @@
-import { useCallback, useContext, useEffect, useMemo} from 'react'
+import { useCallback, useContext, useEffect} from 'react'
 import { CartContext } from '../context'
+import { CartProductItem, ProductCardItem } from '../types/types'
 
 
 
+interface catContext {
+  cart:CartProductItem[],
+  setCart:Function
+}
 
-
- export const useUpdateCart = (cardItem) =>{ 
-  const {cart,setCart} = useContext(CartContext)
+ export const useUpdateCart = (cardItem:ProductCardItem) =>{ 
+  const {cart,setCart} = useContext<catContext>(CartContext)
   
   useEffect(() =>{
    localStorage.setItem('cart',JSON.stringify(cart))
   },[cart])
-  const updateCartItem = useCallback((change) =>{
-          setCart((prevCart) =>{
+  const updateCartItem = useCallback((change:number)=>{
+          setCart((prevCart:CartProductItem[]) =>{
             const currentProductIndex = prevCart.findIndex(item => item.name === cardItem.name)
           //  console.log('предыдущие',prevCart)
           //  console.log('текущие',cart)
-            if(change === 'remove') return prevCart.filter(item => item.name !== cardItem.name)
+            if(change === 0) return prevCart.filter(item => item.name !== cardItem.name)
      
             if(currentProductIndex !== -1){
                 const updateCart = [...prevCart]

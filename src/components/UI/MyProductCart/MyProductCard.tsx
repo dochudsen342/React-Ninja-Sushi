@@ -1,7 +1,7 @@
 import React, { FC, memo, useContext, useMemo } from 'react'
 import cl from './ProductCard.module.css'
 import MyCountProduct from '../MyCountProduct/MyCountProduct'
-import { useUpdateCart } from '../../../hooks/UseUpdateProduct.js'
+import { useUpdateCart } from '../../../hooks/UseUpdateProduct'
 import { CartContext } from '../../../context/index.js'
 import { CartProductItem, ProductCardItem } from '../../../types/types'
 
