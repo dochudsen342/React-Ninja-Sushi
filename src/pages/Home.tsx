@@ -3,7 +3,7 @@ import Header from '../components/Header/Header';
 import Filter from '../components/Filter/Filter';
 import Slider from '../components/UI/MySlider/Slider';
 import ProductSection from '../components/ProductSection/ProductSection';
-import productCards from '../ProductData/productData.js'
+import productCards from '../ProductData/productData'
 import DeliveryArea from '../components/DeliveryArea/DeliveryArea.jsx'
 import NinjaAppDownload from '../components/NinjaAppDownload/NinjaAppDownload';
 import Footer from '../components/Footer/Footer';

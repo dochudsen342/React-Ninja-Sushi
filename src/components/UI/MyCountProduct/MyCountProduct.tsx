@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import cl from './MyCountProduct.module.css'
 import { useUpdateCart } from '../../../hooks/UseUpdateProduct'
 import { ProductCardItem } from '../../../types/types'

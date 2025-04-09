@@ -1,9 +1,9 @@
-import {React, useId} from 'react';
+import {useId} from 'react';
 import './styles/App.css';
 import Home from './pages/Home';
 import { BrowserRouter, Route, Routes} from 'react-router';
 import DetalCategoryProduct from './pages/DetailCategoryProduct';
-import productData from './ProductData/productData.js';
+import productData from './ProductData/productData';
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
       {productData.map((category) =>
       <Route 
       path={`/${category[0].categoryId}`}
-      key={category} 
+      key={category[0].categoryId} 
       element={<DetalCategoryProduct category={category}/>}/>)}
     </Routes>
     </BrowserRouter>
