@@ -21,7 +21,6 @@ export interface CartProductItem{
     qantity:number
 }
 
-
 export interface ImgProps {
     isModal?:boolean
 }
@@ -35,3 +34,4 @@ export interface sortCategoryList {
     id:string,
     sortName:string
 }
+

@@ -11,7 +11,7 @@ const NinjaAppDownload = () => {
         <MyAppStoreButton/>
       </div>
       <div className={cl.app__img}>
-        <img loading='lazy' src={iphoneImg} alt="" />
+        <img loading='lazy' src={''} alt="" />
       </div>
     </div>
   )

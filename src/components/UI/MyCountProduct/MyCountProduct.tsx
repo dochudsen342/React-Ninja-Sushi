@@ -2,10 +2,12 @@ import { FC } from 'react'
 import cl from './MyCountProduct.module.css'
 import { useUpdateCart } from '../../../hooks/UseUpdateProduct'
 import { ProductCardItem } from '../../../types/types'
+
 interface CountProductProps {
   qantity:number,
   cardItem:ProductCardItem
 }
+
 const MyCountProduct:FC<CountProductProps> = ({qantity,cardItem}) => {
   const {updateCartItem} = useUpdateCart(cardItem)
   
