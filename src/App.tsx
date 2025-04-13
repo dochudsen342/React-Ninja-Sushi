@@ -1,4 +1,4 @@
-import {lazy, Suspense, useId} from 'react';
+import {lazy, Suspense} from 'react';
 import './styles/App.css';
 import Home from './pages/Home';
 import { BrowserRouter, Route, Routes} from 'react-router';

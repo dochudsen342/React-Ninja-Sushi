@@ -7,8 +7,10 @@ interface AddedCartProductProps{
   cartItem:CartProductItem
 }
 const AddedCartProduct:FC<AddedCartProductProps> = ({cartItem}) => {
+  
    const {updateCartItem} = useUpdateCart(cartItem)
    const {icon,name,weight,price,qantity} = cartItem
+
   return (
       <div className={cl.product__basket_card}>
         <div className={cl.product__info}>
