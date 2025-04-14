@@ -9,9 +9,7 @@ import { store } from './store/index.js';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Provider store={store}>
-        <CartProvider>
-            <App/>
-        </CartProvider>
+        <App/>
     </Provider>
         
 );

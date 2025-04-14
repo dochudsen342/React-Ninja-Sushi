@@ -1,4 +1,4 @@
-import { CartProductItem } from "../../types/types";
-import { CartActionType } from "../varibalse";
+import { ADD_PRODUCT } from "../varibalse";
 
-export const addProcuctCartCreator = (cartItem:CartProductItem) => ({type:CartActionType.ADD_PRODUCT,payload:cartItem})
+
+export const addProcuctCartCreator = (cardItem) => ({type:ADD_PRODUCT,payload:cardItem})

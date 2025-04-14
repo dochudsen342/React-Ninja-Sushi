@@ -1,24 +1,23 @@
-import React, { FC, memo, useContext, useMemo } from 'react'
+import  { FC, memo, useMemo } from 'react'
 import cl from './ProductCard.module.css'
 import MyCountProduct from '../MyCountProduct/MyCountProduct'
-import { useUpdateCart } from '../../../hooks/UseUpdateProduct'
-import { CartContext } from '../../../context/index.js'
 import { CartProductItem, ProductCardItem } from '../../../types/types'
+import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { addProcuctCartCreator } from '../../../store/actionCreators/addProductCreator'
 
 interface CardItem {
   cardItem:ProductCardItem
 }
-const MyProductCard:FC <CardItem> = ({cardItem}) => {
-    const {cart} = useContext(CartContext)
-   const {updateCartItem} = useUpdateCart(cardItem)
+const MyProductCard:FC <CardItem> = memo(({cardItem}) => {
+  const dispatch = useDispatch()
+  const cart = useSelector((state:any) => state.cartProduct)
    const {icon,name,weight,price} = cardItem
-   
-   
    const qantity:number = useMemo(() =>{
        const productInCart:CartProductItem = cart.find((item:CartProductItem) => item.name === cardItem.name);
        return productInCart ? productInCart.qantity : 0;
     },[cart])
-  
+  console.log(qantity)
   return (
     <article className={cl.card}>
         <div className={cl.card__content}>
@@ -37,7 +36,7 @@ const MyProductCard:FC <CardItem> = ({cardItem}) => {
              {!qantity ? <div className={cl.card__options}>
                               <button className={cl.card__btn_favorite}></button>
                               <button onClick={() => {
-                              updateCartItem(1)
+                              dispatch(addProcuctCartCreator(cardItem))
                               }} 
                               className={cl.card__btn_add_basket}
                               >
@@ -47,7 +46,7 @@ const MyProductCard:FC <CardItem> = ({cardItem}) => {
             </div>
     </article>
   )
-}
+})
  
 export default MyProductCard
 

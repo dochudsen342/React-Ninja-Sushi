@@ -10,7 +10,6 @@ interface MyCartButtonProps {
 }
 const MyCartButton:FC<MyCartButtonProps> = memo(({isModal,onClick}) => {
    const rootClases = [cl.basket__btn] 
-  console.log(isModal)
     if(isModal){
       rootClases.push(cl.active__basket) 
     }

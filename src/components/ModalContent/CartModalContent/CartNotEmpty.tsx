@@ -1,12 +1,13 @@
-import React,{useCallback, useContext, useId} from 'react'
+import {useCallback} from 'react'
 import AddedCartProduct from '../../AddedProduct/AddedCartProduct'
 import cl from './Cart.module.css'
-import { CartContext } from '../../../context/index.js'
 import { CartProductItem } from '../../../types/types.js'
+import { useSelector } from 'react-redux'
 
 
 const CartNotEmpty = () => {
-    const {cart} = useContext(CartContext)
+  const cart = useSelector((state:any) => state.cartProduct)
+ 
      const countTotalPrice = useCallback( () =>{
           const totalPrice = cart.reduce((acc:number,product:CartProductItem) => {
             return acc + product.qantity * product.price 
