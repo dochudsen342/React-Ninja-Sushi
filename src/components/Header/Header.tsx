@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import cl from './header.module.css'
 import HeaderNavbar from './HeaderNavbar'
 import Logo from './Logo'

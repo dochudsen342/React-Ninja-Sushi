@@ -1,5 +1,5 @@
-import React from 'react'
 import cl from './AppStoreBtn.module.css'
+
 const MyAppStoreButton = () => {
   return (
     <div className={cl.app__link}>

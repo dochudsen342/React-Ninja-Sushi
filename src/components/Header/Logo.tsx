@@ -1,4 +1,4 @@
-import React, { FC, memo } from 'react'
+import { FC, memo } from 'react'
 import arrow from '../../images/ninja-sushi Logo/arrow.svg'
 import cl from './header.module.css'
 import LogoSvg from '../UI/SvgIconsComponents/LogoSvgCompnents/LogoSvg.jsx'

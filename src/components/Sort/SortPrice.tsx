@@ -1,4 +1,4 @@
-import React, { useState,memo, FC} from 'react'
+import { useState,memo, FC} from 'react'
 import cl from './Sort.module.css'
 import { useSortPrice } from '../../hooks/useSortPrice'
 import { ProductCardItem, sortCategoryState } from '../../types/types'

@@ -2,7 +2,6 @@ import {useCallback} from 'react'
 import AddedCartProduct from '../../AddedProduct/AddedCartProduct'
 import cl from './Cart.module.css'
 import { CartProductItem } from '../../../types/types.js'
-import { useSelector } from 'react-redux'
 import { useTypedSelector } from '../../../hooks/useTypedSelector'
 
 

@@ -1,6 +1,8 @@
-import React, { FC, ReactNode } from 'react'
+import { FC, ReactNode } from 'react'
 import cl from './MyFilterCategory.module.css'
 import { Link, useLocation } from 'react-router'
+
+
 interface  PropsId{
  toRoute:string,
  filterId:string,

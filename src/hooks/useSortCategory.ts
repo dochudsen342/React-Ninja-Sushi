@@ -1,5 +1,6 @@
 import { useCallback } from "react"
 import { ProductCardItem, sortCategoryList, sortCategoryState } from "../types/types"
+
 type useSortCategory = (sortState:sortCategoryState) => void
 type setFilter = (cardList:ProductCardItem[]) => void
 

@@ -1,5 +1,6 @@
-import {FC, memo, ReactElement, ReactNode} from 'react'
+import {FC, memo,ReactNode} from 'react'
 import cl from './MyActionButton.module.css'
+
 interface ActionButtonProps{
   isModal:boolean,
   children:ReactNode,

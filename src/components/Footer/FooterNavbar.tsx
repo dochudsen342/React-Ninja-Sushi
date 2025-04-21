@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import cl from './FooterStyle/Footer.module.css'
 import cs from './FooterStyle/SocialBtn.module.css'
 const FooterNavbar:FC = () => {

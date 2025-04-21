@@ -1,6 +1,6 @@
-import React from 'react'
 import cl from './FilterSvg.module.css'
 import { useLocation } from 'react-router'
+
 const Sauces = () => {
    const location = useLocation().pathname
   const isActiveFilterName = location === '/sauces'

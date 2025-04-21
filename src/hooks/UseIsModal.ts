@@ -1,4 +1,5 @@
 import { useState,useCallback }  from "react"
+
 export interface IsModalState {
   modalNotify:boolean,
   modalBasket:boolean,

@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import cl from './FooterStyle/Footer.module.css'
 import LogoSvg from '../UI/SvgIconsComponents/LogoSvgCompnents/LogoSvg'
 import MyAppStoreButton from '../UI/MyAppStoreButton/MyAppStoreButton'

@@ -1,4 +1,3 @@
-import React from 'react'
 import cl from './deliveryArea.module.css'
 const DeliveryArea = () => {
   return (

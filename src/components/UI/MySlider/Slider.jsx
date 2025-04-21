@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import { memo } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {  Pagination } from 'swiper/modules';
 import firstSlider from '../../../images/Slider/1310_577_ru.webp'

@@ -3,7 +3,6 @@ import EmptyCart from './EmptyCart.jsx'
 import cl from './Cart.module.css'
 import CartNotEmpty from './CartNotEmpty'
 import { IsModalState } from '../../../hooks/UseIsModal.js'
-import { useSelector } from 'react-redux'
 import { useTypedSelector } from '../../../hooks/useTypedSelector'
 
 interface CartModalContent{

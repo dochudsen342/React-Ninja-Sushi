@@ -1,8 +1,6 @@
 import { FC } from 'react'
 import cl from './MyCountProduct.module.css'
 import { ProductCardItem } from '../../../types/types'
-import { useDispatch } from 'react-redux'
-import { addProcuctCartCreator, removeProductCreator } from '../../../store/actionCreators/cartActionCreators'
 import { useAction } from '../../../hooks/useAction'
 
 

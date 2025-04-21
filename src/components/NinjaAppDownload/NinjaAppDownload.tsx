@@ -1,7 +1,6 @@
-import React from 'react'
 import cl from './NinjaApp.module.css'
-import iphoneImg from '../../images/appStoreIcons/iphoneApp.svg'
 import MyAppStoreButton from '../UI/MyAppStoreButton/MyAppStoreButton'
+
 const NinjaAppDownload = () => {
   return (
     <div className={cl.app__container}>

@@ -1,6 +1,7 @@
 import {configureStore } from '@reduxjs/toolkit'
 import { cartReducer, CartState } from './reducers/cartReducer'
 
+
 export interface RootState {
     cart:CartState
 }

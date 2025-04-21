@@ -2,7 +2,6 @@ import  { FC, memo, useMemo } from 'react'
 import cl from './ProductCard.module.css'
 import MyCountProduct from '../MyCountProduct/MyCountProduct'
 import { CartProductItem, ProductCardItem } from '../../../types/types'
-import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { useTypedSelector } from '../../../hooks/useTypedSelector'
 import { addProcuctCartCreator } from '../../../store/actionCreators/cartActionCreators'
@@ -19,10 +18,11 @@ const MyProductCard:FC <CardItem> = memo(({cardItem}) => {
   
    const {icon,name,weight,price} = cardItem
    const qantity:number = useMemo(() =>{
-       const productInCart:Quantity  = cart.find((item:CartProductItem) => item.name === cardItem.name);
+       const productInCart:Quantity = cart.find((item:CartProductItem) => item.name === cardItem.name);
        const newQuantity = productInCart ? productInCart.quantity : 0;
        return newQuantity
     },[cart])
+
   return (
     <article className={cl.card}>
         <div className={cl.card__content}>

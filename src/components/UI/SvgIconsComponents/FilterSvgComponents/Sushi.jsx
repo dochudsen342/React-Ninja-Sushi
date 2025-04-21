@@ -1,4 +1,3 @@
-import React from 'react'
 import cl from './FilterSvg.module.css'
 import { useLocation } from 'react-router'
 

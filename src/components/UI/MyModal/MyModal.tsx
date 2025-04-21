@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import { FC, ReactNode } from 'react'
 import cl from './MyModal.module.css'
 import { IsModalState } from '../../../hooks/UseIsModal'
 
@@ -6,6 +6,7 @@ interface MyModalProps{
   isModal:IsModalState,
   children:ReactNode
 }
+
 const MyModal:FC <MyModalProps> = ({children,isModal}) => {
   const isModalActive = Object.values(isModal).some(v => v === true)
   const rootClases = [cl.modal__window]

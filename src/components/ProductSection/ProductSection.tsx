@@ -1,8 +1,9 @@
-import React, { FC, memo } from 'react'
+import {FC} from 'react'
 import cl from './ProductSection.module.css'
 import MyProductCard from '../UI/MyProductCart/MyProductCard'
 import {Link} from 'react-router-dom'
 import { ProductCardItem } from '../../types/types'
+
 interface ProductCardList {
   cardList:ProductCardItem[]
 }

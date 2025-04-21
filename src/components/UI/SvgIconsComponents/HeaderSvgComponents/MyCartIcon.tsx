@@ -1,4 +1,4 @@
-import React,{FC, memo} from 'react'
+import {FC, memo} from 'react'
 import cl from './MyActiveIcon.module.css'
 import { ImgProps } from '../../../../types/types';
 

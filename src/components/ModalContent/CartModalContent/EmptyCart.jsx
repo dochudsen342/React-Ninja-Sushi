@@ -1,4 +1,3 @@
-import React from 'react'
 import shoppingBag from '../../../images/OptionsContentImages/shopping-bag.svg'
 import cl from './Cart.module.css'
 
