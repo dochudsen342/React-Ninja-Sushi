@@ -9,3 +9,5 @@
 //         addCartItem:addProductCart,
 //     }
 // })
+
+export default {}

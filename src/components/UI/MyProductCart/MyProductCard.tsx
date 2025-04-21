@@ -4,20 +4,25 @@ import MyCountProduct from '../MyCountProduct/MyCountProduct'
 import { CartProductItem, ProductCardItem } from '../../../types/types'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
-import { addProcuctCartCreator } from '../../../store/actionCreators/addProductCreator'
+import { useTypedSelector } from '../../../hooks/useTypedSelector'
+import { addProcuctCartCreator } from '../../../store/actionCreators/cartActionCreators'
 
 interface CardItem {
   cardItem:ProductCardItem
 }
+
+type Quantity = CartProductItem | number | undefined
+
 const MyProductCard:FC <CardItem> = memo(({cardItem}) => {
   const dispatch = useDispatch()
-  const cart = useSelector((state:any) => state.cartProduct)
+  const cart = useTypedSelector(state => state.cart.cart)
+  
    const {icon,name,weight,price} = cardItem
    const qantity:number = useMemo(() =>{
-       const productInCart:CartProductItem = cart.find((item:CartProductItem) => item.name === cardItem.name);
-       return productInCart ? productInCart.qantity : 0;
+       const productInCart:Quantity  = cart.find((item:CartProductItem) => item.name === cardItem.name);
+       const newQuantity = productInCart ? productInCart.quantity : 0;
+       return newQuantity
     },[cart])
-  console.log(qantity)
   return (
     <article className={cl.card}>
         <div className={cl.card__content}>

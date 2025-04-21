@@ -1,10 +1,10 @@
-import React, { FC, useContext } from 'react'
+import { FC} from 'react'
 import EmptyCart from './EmptyCart.jsx'
 import cl from './Cart.module.css'
 import CartNotEmpty from './CartNotEmpty'
-import { CartContext } from '../../../context/index.js'
 import { IsModalState } from '../../../hooks/UseIsModal.js'
 import { useSelector } from 'react-redux'
+import { useTypedSelector } from '../../../hooks/useTypedSelector'
 
 interface CartModalContent{
   title?:string,
@@ -12,7 +12,7 @@ interface CartModalContent{
 }
 
 const CartModalContent:FC<CartModalContent> = ({title = 'Ваш заказ',setIsModal}) => {
-  const cart = useSelector((state:any) => state.cartProduct)
+  const cart = useTypedSelector(state => state.cart.cart)
   const isEmpty = !cart || cart.length === 0;
   
   return (

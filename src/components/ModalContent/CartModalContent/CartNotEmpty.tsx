@@ -3,23 +3,23 @@ import AddedCartProduct from '../../AddedProduct/AddedCartProduct'
 import cl from './Cart.module.css'
 import { CartProductItem } from '../../../types/types.js'
 import { useSelector } from 'react-redux'
+import { useTypedSelector } from '../../../hooks/useTypedSelector'
 
 
 const CartNotEmpty = () => {
-  const cart = useSelector((state:any) => state.cartProduct)
- 
+  const cart = useTypedSelector(state => state.cart.cart)
+  
      const countTotalPrice = useCallback( () =>{
           const totalPrice = cart.reduce((acc:number,product:CartProductItem) => {
-            return acc + product.qantity * product.price 
+            return acc + product.quantity * product.price 
           },0)     
           return totalPrice
      },[cart])
-     
 
   return (
     <>
     <div className={cl.basket__product_content}>  
-        {cart.map((product:CartProductItem) => <AddedCartProduct key={product.name} cartItem={product}/>)}
+        {cart && cart.map((product:CartProductItem) => <AddedCartProduct key={product.name} cartItem={product}/>)}
     </div>
     <div className={cl.basket__footer}>
         <div className={cl.total__price}>

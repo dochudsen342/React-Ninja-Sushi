@@ -9,16 +9,8 @@ export interface ProductCardItem {
     detail?:string,
 }
 
-
-export interface CartProductItem{
-    categoryId?:string,
-    title?:string,
-    name:string,
-    price:number,
-    icon:string,
-    weight:number,
-    detail?:string,
-    qantity:number
+export interface CartProductItem extends ProductCardItem {
+    quantity:number
 }
 
 export interface ImgProps {
