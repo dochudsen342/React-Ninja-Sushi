@@ -10,7 +10,7 @@ const EmptyFavoriteModal = () => {
   return (
     <>
         <div className={cl.modal__content_title}>
-          <span className={cl.title}>Уведомления</span>
+          <span className={cl.title}>Избранное</span>
           <button onClick={() => dispatch(closeModal())} className={cl.close__btn}></button>
         </div>
       <div className={cl.empty__modal__content}>

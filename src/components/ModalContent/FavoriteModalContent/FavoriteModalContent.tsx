@@ -4,10 +4,10 @@ import EmptyFavoriteModal from './EmptyFavoriteModal'
 
 
 const FavoriteModalContent = () => {
-  
+  const isFavorite = true
   return (
     <>
-       <EmptyFavoriteModal/>
+       {isFavorite && <EmptyFavoriteModal/>}
     </>
   )
 }
