@@ -1,15 +1,17 @@
-import {FC, memo,ReactNode,useMemo} from 'react'
-import MyActionButtton from '../UI/MyActionButton/MyActionButtton'
+import {FC, memo,ReactNode,useEffect,useMemo} from 'react'
 import MyCartButton from '../UI/MyCartButton/MyCartButton'
 import cl from './header.module.css'
 import MyModal from '../UI/MyModal/MyModal'
 import CartModalContent from '../ModalContent/CartModalContent/CartModalContent';
-import MyBellIcon from '../UI/SvgIconsComponents/HeaderSvgComponents/MyBellIcon';
-import MyHeartIcon from '../UI/SvgIconsComponents/HeaderSvgComponents/MyHeartIcon';
-import MyProfileIcon from '../UI/SvgIconsComponents/HeaderSvgComponents/MyProfileIcon';
 import { IsModalState, UseIsModal } from '../../hooks/UseIsModal'
 import MyCountTotalItemCart from '../UI/MyCountTotalItemCart/MyCountTotalItemCart'
-import NotifyModalContent from '../ModalContent/NotifyModalContent/NotifyModalContent'
+import MyFavoriteButtton from '../UI/MyFavoriteButton/MyFavoriteButtton';
+import MyNotificationButton from '../UI/MyNotificationButton/MyNotificationButton';
+import MyProfileBtn from '../UI/MyProfileBtn/MyProfileBtn';
+import NotifyModalContent from '../ModalContent/NotifyModalContent/NotifyModalContent';
+import { useSelector } from 'react-redux';
+import { useTypedSelector } from '../../hooks/useTypedSelector';
+import FavoriteModalContent from '../ModalContent/FavoriteModalContent/FavoriteModalContent';
 
 interface ActionButton {
   id:number,
@@ -19,33 +21,29 @@ interface ActionButton {
 
 
 const HeaderOptions:FC = memo(() => {
+  let rootModalContent = null
 
-const {toggleIsModale,isModal,setIsModal} = UseIsModal()
+  const isModal = useTypedSelector( state => state.modal)
 
-  const buttons = useMemo <ActionButton[]>(() =>
-     [
-      {id:1, modalKey: 'modalNotify', icon: <MyBellIcon isModal={isModal.modalNotify} /> },
-      {id:2,icon: <MyHeartIcon/> },
-      {id:3,icon: <MyProfileIcon /> },
-    ]
-  ,[isModal.modalNotify])
-
+  // useEffect(() =>{
+  //   if(isModal.modalBasket){
+  //     rootModalContent = <CartModalContent/>
+        
+  //   }else if(isModal.modalNotification){
+  //     rootModalContent = <NotifyModalContent/>
+  //   }
+  // },[isModal])
   return (
     <div className={cl.nav__options}>
-      {buttons.map((btn) =>
-        <MyActionButtton 
-        key={btn.id} 
-        isModal={btn.modalKey ? isModal[btn.modalKey]:false}  
-        onClick={() => toggleIsModale(btn.modalKey)}
-        >
-          {btn.icon}
-        </MyActionButtton>
-      )}  
-      <MyModal isModal={isModal}>
-        <CartModalContent setIsModal={setIsModal}/>
-        <NotifyModalContent toggleIsModale={toggleIsModale}/>
+      <MyNotificationButton/>
+      <MyFavoriteButtton/>
+      <MyProfileBtn/>
+      <MyModal>
+        {isModal.modalBasket ? <CartModalContent/>: 
+        isModal.modalNotification? <NotifyModalContent/>: 
+        isModal.modalFavorite && <FavoriteModalContent/>}
       </MyModal>
-      <MyCartButton isModal={isModal.modalBasket} onClick ={() =>  toggleIsModale('modalBasket')}/>
+      <MyCartButton/>
       <MyCountTotalItemCart/>
     </div>
   )

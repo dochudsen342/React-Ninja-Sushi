@@ -70,7 +70,7 @@
     width: 48px;
     height: 48px;
     border-radius: 12px;
-    background-image: url('../../../images/HeaderActionIcons/heartOrange.svg');/*svgComonents*/
+    background-image: url('../../images/HeaderActionIcons/heartOrange.svg');/*svgComonents*/
     background-position: center;
     background-repeat: no-repeat;
     border: none;
@@ -79,20 +79,46 @@
 }
 
 .card__btn_favorite:hover{
-    background-image: url('../../../images/HeaderActionIcons/heartOrange-hover.svg');
+    background-image: url('../../images/HeaderActionIcons/heartOrange-hover.svg');
     background-color: #FF6633;
 }
 
-.card__btn_favorite_active{
-
+@keyframes favoriteActive {
+  from {
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
 }
+
+
+.card__btn_favorite_active{
+     width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background-image: url('../../images/HeaderActionIcons/heartOrange-hover.svg');/*svgComonents*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #FF6633;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    animation-name: favoriteActive;
+    animation-duration: 1s;
+}
+
+
 
 .card__btn_add_basket{
     width: 76px;
     height: 48px;
     background-color: #CCF5D5;
     border-radius: 12px;
-    background-image: url('../../../images/HeaderActionIcons/addCross.svg');/*svgComonents*/
+    background-image: url('../../images/HeaderActionIcons/addCross.svg');/*svgComonents*/
     background-position: center;
     background-repeat: no-repeat;
     border: none;
@@ -102,7 +128,7 @@
 
 .card__btn_add_basket:hover{
     background-color: #00CC2D;
-    background-image: url('../../../images/HeaderActionIcons/addCross-hover.svg');
+    background-image: url('../../images/HeaderActionIcons/addCross-hover.svg');
 }
 
 

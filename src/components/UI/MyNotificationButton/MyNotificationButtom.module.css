@@ -1,0 +1,24 @@
+.notification__header_btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    border: 1px solid #D2D2D7;
+    background-color: white;
+    background-image: url('../../../images/HeaderActionIcons/bell.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.notification__header_btn:hover{
+    border: 1px solid #FF6633;
+}
+
+.active__notification_btn{
+    background-image: url('../../../images/HeaderActionIcons/bell-active.svg');
+    background-color: #FF6633;
+}

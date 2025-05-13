@@ -1,6 +1,6 @@
 import {FC, useState } from 'react'
 import cl from './CategoryProductSection.module.css'
-import MyProductCard from '../UI/MyProductCart/MyProductCard'
+import MyProductCard from '../ProductCart/ProductCard'
 import Sort from '../Sort/Sort'
 import { ProductCardItem } from '../../types/types'
 

@@ -1,12 +1,10 @@
 import React, { FC } from 'react'
 import { IsModalState } from '../../../hooks/UseIsModal'
-interface NotifyProps {
-  toggleIsModale:(modalKey:keyof IsModalState | undefined) => void
-}
-const NotifyModalContent:FC <NotifyProps> = ({toggleIsModale}) => {
+
+const NotifyModalContent:FC  = () => {
   
   return (
-    <div style={{display:'none'}}>
+    <div>
       УВЕДОМЛЕНИЯ
     </div>
   )

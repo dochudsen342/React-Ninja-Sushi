@@ -8,7 +8,7 @@ interface AddedCartProductProps{
   cartItem:CartProductItem
 }
 const AddedCartProduct:FC<AddedCartProductProps> = ({cartItem}) => {
-  const {addProcuctCartCreator,removeProductCreator} = useAction()
+  const {addProcuctCartCreator,removeProductCreator,deleteProductCreator} = useAction()
    const {icon,name,weight,price,quantity} = cartItem
 
   return (
@@ -28,7 +28,7 @@ const AddedCartProduct:FC<AddedCartProductProps> = ({cartItem}) => {
             <button onClick={() =>{addProcuctCartCreator(cartItem)}} className={cl.increment}></button>
           </div>
         </div>
-        <button onClick={() =>{removeProductCreator(cartItem)}} className={cl.remove__product}></button>
+        <button onClick={() =>{deleteProductCreator(cartItem)}} className={cl.remove__product}></button>
       </div>
   )
 }

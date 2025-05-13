@@ -1,23 +1,35 @@
-import { useState,useCallback }  from "react"
+import { useState, useCallback } from "react"
 
 export interface IsModalState {
-  modalNotify:boolean,
-  modalBasket:boolean,
+  modalFavorite: boolean,
+  modalBasket: boolean,
+  modalProfile: boolean,
+  modalNotification: boolean
 }
 
-export const UseIsModal = () =>{
-    const [isModal,setIsModal] = useState<IsModalState>({
-        modalNotify:false,
-        modalBasket:false,
-      })
+export const UseIsModal = () => {
+  const [isModal, setIsModal] = useState<IsModalState>({
+    modalFavorite: false,
+    modalBasket: false,
+    modalProfile: false,
+    modalNotification: false
+  })
 
-    const toggleIsModale = useCallback(
-        (modalKey:keyof IsModalState | undefined) =>  {
-          
-          if(!modalKey)return
-          
-          setIsModal((prevIsModal)  => ({...prevIsModal , [modalKey]:!prevIsModal[modalKey]}))
-        },[])
-
-      return {toggleIsModale,isModal,setIsModal}
+  const toggleIsModale = 
+    (modalKey: keyof IsModalState | undefined) => {
+      if (!modalKey) return
+  
+      setIsModal((prevIsModal)=> ({...prevIsModal,[modalKey]:!prevIsModal[modalKey]}))
+      
+    }
+   
+  return { toggleIsModale, isModal, setIsModal }
 } 
+
+
+//  const newState: any = {
+//           ...Object.fromEntries(
+//             (Object.keys(prevIsModal) as (keyof IsModalState)[]).map(
+//               (key) => [key, false]
+//             ))
+//         };

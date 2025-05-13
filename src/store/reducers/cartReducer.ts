@@ -15,8 +15,12 @@ interface CartRemoveAction {
   type: CartTypeAction.REMOVE_PRODUCT
   payload: CartProductItem
 }
+interface DeleteProduct {
+  type:CartTypeAction.DELETE_PRODUCT,
+  payload:CartProductItem
+}
 
-type CartAction = CartAddAction | CartRemoveAction
+type CartAction = CartAddAction | CartRemoveAction | DeleteProduct
 
 const initialState: CartState = {
   cart: []
@@ -52,6 +56,10 @@ export const cartReducer = (state: CartState = initialState, action: CartAction)
         }
       }
       return state
+    }
+
+    case CartTypeAction.DELETE_PRODUCT:{
+      return { ...state, cart: state.cart.filter(item => item.name !== cartItem.name) }
     }
 
     default:

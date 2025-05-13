@@ -1,6 +1,5 @@
 import { TypedUseSelectorHook,useSelector } from "react-redux";
-import { RootState } from "../store";
-
+import { RootState } from "../store/store";
 
 
 
