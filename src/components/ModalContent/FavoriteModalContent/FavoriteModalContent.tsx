@@ -1,10 +1,14 @@
 import React from 'react'
+import cl from './FavoriteModal.module.css'
+import EmptyFavoriteModal from './EmptyFavoriteModal'
+
 
 const FavoriteModalContent = () => {
+  
   return (
-    <div>
-      Favorite
-    </div>
+    <>
+       <EmptyFavoriteModal/>
+    </>
   )
 }
 

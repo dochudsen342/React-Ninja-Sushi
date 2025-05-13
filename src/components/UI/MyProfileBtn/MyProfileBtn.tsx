@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
 import cl from './MyProfileBtn.module.css'
-import { IsModalState} from '../../../hooks/UseIsModal'
 import { useTypedSelector } from '../../../hooks/useTypedSelector'
 import { useDispatch } from 'react-redux'
 import { changeModal } from '../../../store/slices/ModalSlice'

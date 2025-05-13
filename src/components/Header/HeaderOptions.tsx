@@ -21,18 +21,9 @@ interface ActionButton {
 
 
 const HeaderOptions:FC = memo(() => {
-  let rootModalContent = null
-
+  
   const isModal = useTypedSelector( state => state.modal)
 
-  // useEffect(() =>{
-  //   if(isModal.modalBasket){
-  //     rootModalContent = <CartModalContent/>
-        
-  //   }else if(isModal.modalNotification){
-  //     rootModalContent = <NotifyModalContent/>
-  //   }
-  // },[isModal])
   return (
     <div className={cl.nav__options}>
       <MyNotificationButton/>

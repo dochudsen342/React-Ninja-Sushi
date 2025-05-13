@@ -1,4 +1,4 @@
-import shoppingBag from '../../../images/OptionsContentImages/shopping-bag.svg'
+import shoppingBag from '../../../images/OptionsContentImages/EmptyCart.svg'
 import cl from './Cart.module.css'
 
 const EmptyCart = () => {
@@ -15,7 +15,6 @@ const EmptyCart = () => {
             <button>Повторить прошлый заказ</button>
             <button>История заказов</button>
         </div>
-        
     </div>
   )
 }

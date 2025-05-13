@@ -9,7 +9,7 @@ import { modalReducer } from './slices/ModalSlice'
 
 export interface RootState {
     cart:CartState,
-    modal:IsModalState
+    modal:IsModalState,
 }
 
 export const store = configureStore<RootState,any,any>({
