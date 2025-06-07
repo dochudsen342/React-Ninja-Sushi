@@ -2,6 +2,8 @@ import { FC } from 'react'
 import cl from './MyCountProduct.module.css'
 import { ProductCardItem } from '../../../types/types'
 import { useAction } from '../../../hooks/useAction'
+import { useDispatch } from 'react-redux'
+import { addProduct, removeProduct } from '../../../store/slices/CartSlice'
 
 
 interface CountProductProps {
@@ -10,13 +12,13 @@ interface CountProductProps {
 }
 
 const MyCountProduct:FC<CountProductProps> = ({qantity,cardItem}) => {
-  const {addProcuctCartCreator,removeProductCreator} = useAction()
+  const dispatch = useDispatch()
   
     return (
     <div className={cl.counter}>
-        <button onClick={() => {removeProductCreator(cardItem)}} className={cl.decrement}></button>
+        <button onClick={() => {dispatch(removeProduct(cardItem))}} className={cl.decrement}></button>
         <span className={cl.value}>{qantity}</span>
-        <button onClick={() => {addProcuctCartCreator(cardItem)}} className={cl.increment}></button>
+        <button onClick={() => {dispatch(addProduct(cardItem))}} className={cl.increment}></button>
     </div>
   )
 }

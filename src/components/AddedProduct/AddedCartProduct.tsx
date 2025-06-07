@@ -1,14 +1,16 @@
 import  { FC } from 'react'
 import cl from './AddedProduct.module.css'
 import { CartProductItem} from '../../types/types'
-import { useAction } from '../../hooks/useAction'
+import { useDispatch } from 'react-redux'
+import { addProduct, deleteProduct, removeProduct } from '../../store/slices/CartSlice'
 
 
 interface AddedCartProductProps{
   cartItem:CartProductItem
 }
 const AddedCartProduct:FC<AddedCartProductProps> = ({cartItem}) => {
-  const {addProcuctCartCreator,removeProductCreator,deleteProductCreator} = useAction()
+  
+  const dispatch = useDispatch()
    const {icon,name,weight,price,quantity} = cartItem
 
   return (
@@ -23,12 +25,12 @@ const AddedCartProduct:FC<AddedCartProductProps> = ({cartItem}) => {
         <div className={cl.product__value}>
           <span className={cl.product__price}>{price} руб</span>
           <div className={cl.product__count}>
-            <button onClick={() =>{removeProductCreator(cartItem)}} className={cl.decrement}></button>
+            <button onClick={() =>{dispatch(removeProduct(cartItem))}} className={cl.decrement}></button>
             <span className={cl.qantity}>{quantity}</span>
-            <button onClick={() =>{addProcuctCartCreator(cartItem)}} className={cl.increment}></button>
+            <button onClick={() =>{dispatch(addProduct(cartItem))}} className={cl.increment}></button>
           </div>
         </div>
-        <button onClick={() =>{deleteProductCreator(cartItem)}} className={cl.remove__product}></button>
+        <button onClick={() =>{dispatch(deleteProduct(cartItem))}} className={cl.remove__product}></button>
       </div>
   )
 }

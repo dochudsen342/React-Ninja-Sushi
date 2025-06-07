@@ -3,20 +3,24 @@ import cl from './ProductCard.module.css'
 import MyCountProduct from '../UI/MyCountProduct/MyCountProduct'
 import { CartProductItem, ProductCardItem } from '../../types/types'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
-import { useAction } from '../../hooks/useAction'
+import { useDispatch } from 'react-redux'
+import { addProduct} from '../../store/slices/CartSlice'
 
 interface CardItem {
-  cardItem: ProductCardItem
+  cardItem: ProductCardItem 
 }
 
 type Quantity = CartProductItem | number | undefined
 
 const MyProductCard: FC<CardItem> = memo(({ cardItem }) => {
   const [isFavorite, setIsFavorite] = useState(false)
-  const { addProcuctCartCreator } = useAction()
+
+  const dispath = useDispatch()
   const cart = useTypedSelector(state => state.cart.cart)
+
   const rootFavoriteBtnClass = isFavorite ? cl.card__btn_favorite_active : cl.card__btn_favorite
   const { icon, name, weight, price } = cardItem
+
   const qantity: number = useMemo(() => {
     const productInCart: Quantity = cart.find((item: CartProductItem) => item.name === cardItem.name);
     const newQuantity = productInCart ? productInCart.quantity : 0;
@@ -41,7 +45,7 @@ const MyProductCard: FC<CardItem> = memo(({ cardItem }) => {
         {!qantity ? <div className={cl.card__options}>
           <button onClick={() => setIsFavorite(!isFavorite)} className={rootFavoriteBtnClass}></button>
           <button onClick={() => {
-            addProcuctCartCreator(cardItem)
+            dispath(addProduct(cardItem))
           }}
             className={cl.card__btn_add_basket}
           >
