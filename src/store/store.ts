@@ -2,7 +2,7 @@ import {configureStore } from '@reduxjs/toolkit'
 import {  CartState } from './reducers/cartReducer'
 import { IsModalState } from '../hooks/UseIsModal'
 import { modalReducer } from './slices/ModalSlice'
-import { cartReducer } from './slices/CartSlice'
+import { cartReducer } from './slices/cartSlice'
 
 
 

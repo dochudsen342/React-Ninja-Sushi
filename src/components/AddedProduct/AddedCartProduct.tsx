@@ -2,16 +2,16 @@ import  { FC } from 'react'
 import cl from './AddedProduct.module.css'
 import { CartProductItem} from '../../types/types'
 import { useDispatch } from 'react-redux'
-import { addProduct, deleteProduct, removeProduct } from '../../store/slices/CartSlice'
+import { addProduct, deleteProduct, removeProduct } from '../../store/slices/cartSlice'
 
 
 interface AddedCartProductProps{
   cartItem:CartProductItem
 }
 const AddedCartProduct:FC<AddedCartProductProps> = ({cartItem}) => {
-  
+  const {icon,name,weight,price,quantity} = cartItem
   const dispatch = useDispatch()
-   const {icon,name,weight,price,quantity} = cartItem
+   
 
   return (
       <div className={cl.product__basket_card}>
