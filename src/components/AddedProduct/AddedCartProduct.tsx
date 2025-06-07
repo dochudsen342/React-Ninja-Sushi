@@ -10,6 +10,7 @@ interface AddedCartProductProps{
 }
 const AddedCartProduct:FC<AddedCartProductProps> = ({cartItem}) => {
   const {icon,name,weight,price,quantity} = cartItem
+  
   const dispatch = useDispatch()
    
 
