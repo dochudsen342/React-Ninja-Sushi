@@ -2,7 +2,7 @@ import  { FC } from 'react'
 import cl from './AddedProduct.module.css'
 import { CartProductItem} from '../../types/types'
 import { useDispatch } from 'react-redux'
-import { addProduct, deleteProduct, removeProduct } from '../../store/slices/CartSlice'
+import { addProduct, deleteProduct, removeProduct } from '../../store/slices/cartSlice'
 
 
 interface AddedCartProductProps{
