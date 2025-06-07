@@ -9,9 +9,9 @@ interface AddedCartProductProps{
   cartItem:CartProductItem
 }
 const AddedCartProduct:FC<AddedCartProductProps> = ({cartItem}) => {
-  
+  const {icon,name,weight,price,quantity} = cartItem
   const dispatch = useDispatch()
-   const {icon,name,weight,price,quantity} = cartItem
+   
 
   return (
       <div className={cl.product__basket_card}>
