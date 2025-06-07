@@ -5,14 +5,10 @@ import { closeModal } from '../../../store/slices/ModalSlice'
 import EmptyFavorite from '../../../images/OptionsContentImages/EmptyFavoriteProduct.svg'
 
 const EmptyFavoriteModal = () => {
-    const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
   return (
     <>
-        <div className={cl.modal__content_title}>
-          <span className={cl.title}>Избранное</span>
-          <button onClick={() => dispatch(closeModal())} className={cl.close__btn}></button>
-        </div>
       <div className={cl.empty__modal__content}>
         <div className={cl.empty__modal_description}>
           <img width={250} height={250} src={EmptyFavorite} alt="" />

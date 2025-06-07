@@ -1,21 +1,21 @@
 import {configureStore } from '@reduxjs/toolkit'
-import { cartReducer, CartState } from './reducers/cartReducer'
-import ModalReducer from './reducers/ModalReducer'
+import {  CartState } from './reducers/cartReducer'
 import { IsModalState } from '../hooks/UseIsModal'
 import { modalReducer } from './slices/ModalSlice'
+import { cartReducer } from './slices/CartSlice'
 
 
 
 
 export interface RootState {
-    cart:CartState,
     modal:IsModalState,
+    cart:CartState,
 }
 
 export const store = configureStore<RootState,any,any>({
     reducer:{
-        cart:cartReducer,
         modal:modalReducer,
+        cart:cartReducer,
     }
 })
 

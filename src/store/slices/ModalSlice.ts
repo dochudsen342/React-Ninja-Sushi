@@ -8,7 +8,7 @@ interface IsModalState {
   modalNotification: boolean
 }
 
-type PaloadAction = 'modalFavorite' | 'modalBasket' | 'modalProfile' | 'modalNotification'
+type modalAction = 'modalFavorite' | 'modalBasket' | 'modalProfile' | 'modalNotification'
 
 const initialState:IsModalState = {
     modalFavorite: false,
@@ -21,7 +21,7 @@ const initialState:IsModalState = {
     name:'Modal',
     initialState,
     reducers: {
-        changeModal(state,action:PayloadAction<PaloadAction>) {
+        changeModal(state,action:PayloadAction<modalAction>) {
             
             (Object.keys(state) as (keyof IsModalState)[]).forEach(item =>{
                 if(state[action.payload]){
